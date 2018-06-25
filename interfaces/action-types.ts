@@ -8,5 +8,5 @@ export interface NumberActionType {
 
 export interface MessageActionType {
     type: string;
-    messageObject : MessageObject
+    messageObject? : MessageObject
 }

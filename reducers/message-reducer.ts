@@ -1,9 +1,9 @@
 import { MessageObject } from "../interfaces/message-interface";
 import { Reducer } from "redux";
 import { MessageActionType } from "../interfaces/action-types";
-import { ADD_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE } from "../constants";
+import { ADD_MESSAGE, REMOVE_MESSAGE, UPDATE_MESSAGE, GET_ALL_MESSAGES } from "../constants";
 
-export let baseMessages = (state: Array<MessageObject> = [], action: MessageActionType) => {
+export let baseMessages = (state:any = [], action: MessageActionType) => {
 
     switch (action.type) {
         case ADD_MESSAGE:
@@ -18,6 +18,8 @@ export let baseMessages = (state: Array<MessageObject> = [], action: MessageActi
                 }
                 return m;
             });
+        case GET_ALL_MESSAGES: 
+            return state;
         default:
             return state;
     }

@@ -4,9 +4,6 @@ import { ADD_NUMBER, MINUS_NUMBER, MULTIPLY_NUMBER } from "../constants";
 
 // Reducers
 export let baseTotal: Reducer<number, NumberActionType> = (state: number = 0, action: NumberActionType) => {
-
-    console.log(state);
-
     switch (action.type) {
         case ADD_NUMBER:
             return state + action.amount;
